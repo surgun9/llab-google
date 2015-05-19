@@ -18,11 +18,11 @@ class Configuration implements ConfigurationInterface
     {
 
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('surgun9_google_api');
+        $rootNode = $treeBuilder->root('google_api');
 
         $rootNode
             ->children()
-                ->arrayNode('google_service')
+                ->arrayNode('service')
                     ->children()
                         ->scalarNode('client_id')
                             ->isRequired()

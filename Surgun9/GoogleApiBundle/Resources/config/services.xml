@@ -6,7 +6,7 @@
         <parameter key="googleapi_service_class">Surgun9\GoogleApiBundle\Service\GoogleApiService</parameter>
     </parameters>
     <services>
-        <service id="googleapi_service" class="%googleapi_service_class%">
+        <service id="google_api" class="%googleapi_service_class%">
             <call method="setClientId">
                 <argument>%google_api.service.client_id%</argument>
             </call>

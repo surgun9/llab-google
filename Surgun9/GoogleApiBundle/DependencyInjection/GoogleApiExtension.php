@@ -27,19 +27,19 @@ class GoogleApiExtension extends Extension
 
         $container->setParameter(
             'google_api.service.client_id',
-            $config['google_service']['client_id']
+            $config['service']['client_id']
         );
         $container->setParameter(
             'google_api.service.service_email',
-            $config['google_service']['service_email']
+            $config['service']['service_email']
         );
         $container->setParameter(
             'google_api.service.key_file',
-            $config['google_service']['key_file']
+            $config['service']['key_file']
         );
         $container->setParameter(
             'google_api.service.scope',
-            $config['google_service']['scope']
+            $config['service']['scope']
         );
     }
 }
