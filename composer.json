@@ -1,5 +1,5 @@
 {
-    "name": "surgun9/GoogleApiBundle",
+    "name": "surgun9/llab-google",
     "type": "symfony-bundle",
     "description": "Symfony2 Google API Bundle",
     "keywords": ["googleapi", "symfony", "google api", "gooogle api php"],
