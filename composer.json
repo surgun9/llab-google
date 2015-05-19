@@ -1,0 +1,23 @@
+{
+    "name": "surgun9/GoogleApiBundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 Google API Bundle",
+    "keywords": ["googleapi", "symfony", "google api", "gooogle api php"],
+    "license": "MIT",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Serghei Luchianenco",
+            "email": "serge@luchianenco.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": ">=2.3",
+        "google/apiclient": "1.1.*@dev"
+    },
+    "autoload": {
+        "psr-0": { "Surgun9\\GoogleApiBundle\\": "" }
+    },
+    "minimum-stability": "dev"
+}

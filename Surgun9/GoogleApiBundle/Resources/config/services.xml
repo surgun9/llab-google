@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="googleapi_service_class">Surgun9\GoogleApiBundle\Service\GoogleApiService</parameter>
+    </parameters>
+    <services>
+        <service id="googleapi_service" class="%googleapi_service_class%">
+            <call method="setClientId">
+                <argument>%google_api.service.client_id%</argument>
+            </call>
+            <call method="setServiceEmail">
+                <argument>%google_api.service.service_email%</argument>
+            </call>
+            <call method="setKeyFile">
+                <argument>%google_api.service.key_file%</argument>
+            </call>
+            <call method="setScope">
+                <argument>%google_api.service.scope%</argument>
+            </call>
+        </service>
+    </services>
+</container>
