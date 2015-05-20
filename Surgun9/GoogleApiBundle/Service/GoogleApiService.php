@@ -15,14 +15,6 @@ class GoogleApiService
     protected $profileId;
 
     /**
-     * @return mixed
-     */
-    public function __construct()
-    {
-        return $this;
-    }
-
-    /**
      * @param $clientId
      * @return $this
      */
@@ -114,11 +106,10 @@ class GoogleApiService
 
     /**
      * @return \Google_Client
+     * @throws \Exception
      */
     public function getGoogleClient()
     {
-
-
         if (file_exists($this->keyFile)) {
 
             $key = file_get_contents($this->keyFile);
@@ -129,7 +120,6 @@ class GoogleApiService
                 $key
             );
 
-
             $client = new \Google_Client();
             $client->setScopes($this->scope);
             $client->setAssertionCredentials($auth);
@@ -137,16 +127,10 @@ class GoogleApiService
             if ($client->getAuth()->isAccessTokenExpired()) {
                 $client->getAuth()->refreshTokenWithAssertion($auth);
             }
-
-
             $client->setClientId($this->clientId);
-
-
         } else {
-            $client = false;
+            throw new \Exception('There is no p12 key file in specified location: '. $this->keyFile);
         }
-
-
 
         return $client;
 
