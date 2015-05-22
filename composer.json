@@ -13,8 +13,8 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "symfony/framework-bundle": "*",
-        "google/apiclient": "@dev"
+        "symfony/framework-bundle": "2.6.*",
+        "google/apiclient": "1.1.*@dev"
     },
     "autoload": {
         "psr-0": { "Surgun9\\GoogleApiBundle\\": "" }
