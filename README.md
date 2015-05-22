@@ -11,4 +11,4 @@ add in `config.yml` below configuration
             service_email: "%gapi_service_email%"
             key_file:      "%gapi_key_file%"
             scope:         "%gapi_scope%"
-            
+
