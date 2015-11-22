@@ -129,10 +129,12 @@ class GoogleApiService
             }
             $client->setClientId($this->clientId);
         } else {
-            throw new \Exception('There is no p12 key file in specified location: '. $this->keyFile);
+            throw new \Exception('Invalid p12 key file path given: '. $this->keyFile);
         }
 
         return $client;
 
     }
+
+    
 }
